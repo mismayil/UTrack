@@ -1,0 +1,129 @@
+body {
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+#menu {
+    position: relative;
+    left: 500px;
+    top: 10px;
+}
+
+#main_container {
+    position: relative;
+    left: 300px;
+    top: 100px;
+}
+
+.input {
+    width: 30%;
+    float: left;
+}
+
+#submit_btn {
+    position: relative;
+    left: 500px;
+}
+
+#analysis_div {
+    display: none;
+}
+
+#input_div {
+    display: inline;
+}
+
+#view_menu {
+    float: left;
+}
+
+#graph_table {
+    float: left;
+    width: 30%;
+    position: relative;
+    left: 200px;
+}
+
+#graph_bar {
+    display: none;
+    position: relative;
+    left: 200px;
+}
+
+#canvas_bar {
+    border: solid cornflowerblue;
+    margin: 0;
+}
+
+.clear_float {
+    clear: both;
+}
+
+#customize_div {
+    display: none;
+}
+
+#submit_info {
+    display: none;
+}
+
+.color-box {
+    width: 20px;
+    height: 20px;
+    float: right;
+}
+
+#energy_div {
+    background-color: blue;
+}
+
+#stress_div {
+    background-color: red;
+}
+
+#happiness_div {
+    background-color: green;
+}
+
+#levels {
+    position: relative;
+    left: -10px;
+    float: left;
+}
+
+#graph_activity_names {
+    position: relative;
+    left: 20px;
+}
+
+#p5 {
+    position: relative;
+    top: 5px;
+}
+
+#p4 {
+    position: relative;
+    top: 15px;
+}
+
+#p3 {
+    position: relative;
+    top: 25px;
+}
+
+#p2 {
+    position: relative;
+    top: 35px;
+}
+
+#p1 {
+    position: relative;
+    top: 45px;
+}
+
+#input_btn {
+    background-color: blue;
+}
+
+#analysis_btn {
+    background-color: cornflowerblue;
+}

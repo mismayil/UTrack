@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>UTrack!</title>
+    <link rel="stylesheet" href="css/ext/bootstrap.css"/>
+    <link rel="stylesheet" href="css/utrack.css"/>
+</head>
+<body>
+
+<div id="app_container" class="container">
+
+    <h1>UTrack!</h1>
+    Track and analyze data that matters to you!
+
+    <div id="menu" class="row">
+        <div id="input_btn" class="col-md-1 btn btn-info">Input</div>
+        <div id="analysis_btn" class="col-md-1 btn btn-info">Analysis</div>
+    </div>
+
+    <div id="main_container" class="container">
+        <div id="input_div">
+            <p id="submit_info" class="text-success"><i>Submitted!</i><br><br></p>
+            <div class="row">
+                <div class="col-md-2"><b>activity: </b></div>
+                <div class="col-md-4">
+                    <select class="form-control" id="activity_sel">
+                        <option>writing code</option>
+                        <option>watching TV</option>
+                        <option>reading book</option>
+                        <option>listening to music</option>
+                        <option>eating dinner</option>
+                        <option>playing sports</option>
+                        <option>studying for exams</option>
+                        <option>attending lectures</option>
+                        <option>chatting on facebook</option>
+                        <option>commuting or walking</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-2"><b>energy level: </b></div>
+                <div class="col-md-4">
+                    <input type="text" class="input form-control" id="energy_level" placeholder="1 to 5">&nbsp(1=exhausted, 5=very awake)
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-2"><b>stress level: </b></div>
+                <div class="col-md-4">
+                    <input type="text" class="input form-control" id="stress_level" placeholder="1 to 5">&nbsp(1=very stressed, 5=very relaxed)
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-2"><b>happiness level: </b></div>
+                <div class="col-md-4">
+                    <input type="text" class="input form-control" id="happiness_level" placeholder="1 to 5">&nbsp;(1=depressed, 5=very happy)
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-md-2"><b>time spent: </b></div>
+                <div class="col-md-4">
+                    <input type="text" class="input form-control" id="time_spent" placeholder="time">&nbsp; minutes
+                </div>
+            </div>
+            <br>
+            <p><b>last data entry was:&nbsp;&nbsp;&nbsp</b><span id="last_entry_time">nothing entered yet</span></p>
+            <button id="submit_btn" class="btn btn-success">Submit</button>
+
+        </div>
+
+        <div id="analysis_div">
+
+            <div id="view_menu">
+                <p><b>Views:</b></p>
+                <div class="radio">
+                    <label><input type="radio" id="table_radio" name="optradio" checked>table summary</label>
+                </div>
+                <div class="radio">
+                    <label><input type="radio" id="bar_radio" name="optradio">bar graph</label>
+                </div>
+                <br><br>
+                <div id="customize_div">
+                    <p><b>Customize:</b></p>
+                    <div class="checkbox">
+                        <label><input type="checkbox" id="energy_box" value="" checked>energy level</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div id="energy_div" class="color-box"></div>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" id="stress_box" value="" checked>stress level</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div id="stress_div" class="color-box"></div>
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" id="happiness_box" value="" checked>happiness level</label>&nbsp;&nbsp;&nbsp;<div id="happiness_div" class="color-box"></div>
+                    </div>
+                    <br>
+                    <button id="plot_btn" class="btn btn-primary">Plot</button>
+                </div>
+            </div>
+
+            <div id="graph_table">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Activities you are tracking</th>
+                            <th>Time spent (mins)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="act_table_body">
+                    </tbody>
+                </table>
+                <br><br>
+                P.S. You are spending too much time <p id="note"></p>
+            </div>
+
+            <div id="graph_bar">
+                <div id="levels">
+                    <p id="p5">5</p>
+                    <p id="p4">4</p>
+                    <p id="p3">3</p>
+                    <p id="p2">2</p>
+                    <p id="p1">1</p>
+                </div>
+                <canvas id="canvas_bar" width="500" height="200"></canvas>
+                <div id="graph_activity_names"></div>
+            </div>
+
+            <p class="clear_float"></p>
+        </div>
+
+        <div id="unit_tests">
+            <!-- Keep this here so TAs can run your unit tests -->
+            <a href="unit_tests.html">Run Unit Tests</a>
+        </div>
+    </div>
+
+
+</div>
+
+<script src="js/ext/underscore.js"></script>
+<script src="js/model.js"></script>
+<script src="js/view.js"></script>
+<script src="js/utrack.js"></script>
+</body>
+</html>
